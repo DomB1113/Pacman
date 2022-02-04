@@ -37,4 +37,6 @@ body{
     color: white;
     padding: 7px;
     text-align: center;
+    position: absolute;
+    top: 300px;
 }
