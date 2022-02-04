@@ -14,6 +14,11 @@ var world = [
     [2,2,2,2,2,2,2,2,2,2]
 ];
 
+var pacman = {
+    x:0,
+    y:0
+};
+
 function displayWorld(){
     var output= '';
     for(var i=0; i<world.length; i++){
@@ -32,4 +37,28 @@ function displayWorld(){
     document.getElementById('world').innerHTML = output;
 }
 
+function displayPacman(){
+    document.getElementById('pacman').style.top = pacman.y*20 + "px"
+    document.getElementById('pacman').style.left = pacman.x*20 + "px"
+}
+
 displayWorld();
+displayPacman();
+
+document.onkeydown = function(e){
+    if(e.keyCode == 37){ //left
+        pacman.x--;
+    }
+    else if(e.keyCode == 39){//right
+        pacman.x ++;
+    }
+    else if(e.keyCode == 38){// top
+        pacman.y --;
+    }
+    else if(e.keyCode == 40){// bottom
+        pacman.y ++;
+    }
+    
+    console.log(e.keyCode)
+    displayPacman();
+}
