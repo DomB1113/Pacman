@@ -16,8 +16,8 @@ var world = [
 
 var score = 0;
 var pacman = {
-    x:0,
-    y:0
+    x:1,
+    y:1
 };
 
 function displayWorld(){
@@ -34,7 +34,7 @@ function displayWorld(){
         }
         output+= "\n</div>"
     }
-    console.log(output)
+    // console.log(output)
     document.getElementById('world').innerHTML = output;
 }
 
@@ -51,16 +51,16 @@ displayPacman();
 displayScore();
 
 document.onkeydown = function(e){
-    if(e.keyCode == 37){ //left
+    if(e.keyCode == 37 && world[pacman.y][pacman.x-1] !=2){ //left
         pacman.x--;
     }
-    else if(e.keyCode == 39){//right
+    else if(e.keyCode == 39 && world[pacman.y][pacman.x+1] !=2 ){//right
         pacman.x ++;
     }
-    else if(e.keyCode == 38){// top
+    else if(e.keyCode == 38 && world[pacman.y-1][pacman.x] !=2){// top
         pacman.y --;
     }
-    else if(e.keyCode == 40){// bottom
+    else if(e.keyCode == 40 && world[pacman.y+1][pacman.x] !=2){// bottom
         pacman.y ++;
     }
     
@@ -73,3 +73,4 @@ document.onkeydown = function(e){
     }
     displayPacman();
 }
+
