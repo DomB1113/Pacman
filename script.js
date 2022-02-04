@@ -58,7 +58,11 @@ document.onkeydown = function(e){
     else if(e.keyCode == 40){// bottom
         pacman.y ++;
     }
-    
-    console.log(e.keyCode)
+    console.log(pacman.x)
+    console.log(pacman.y)
+    if(world[pacman.y][pacman.x]==1)
+    world[pacman.y][pacman.x] = 0;
+    // console.log(e.keyCode)
     displayPacman();
+    displayWorld();
 }
