@@ -86,10 +86,18 @@ document.onkeydown = function(e){
     if(world[pacman.y][pacman.x]==1){
         world[pacman.y][pacman.x] = 0;
         score += 10;
-    // console.log(e.keyCode)
+    
         displayWorld();
         displayScore();
     }
+    if(world[pacman.y][pacman.x]==3){
+        world[pacman.y][pacman.x] = 0;
+        score += 50;
+    
+        displayWorld();
+        displayScore();
+    }
+
     displayPacman();
 }
 
