@@ -21,6 +21,12 @@ body{
     background-repeat: no-repeat;
     background-position: center;
 }
+.cherry{
+    background: url(/advancedJS/Pacman/pacmanImg/Tumblr_p0ugakbvzB1ush256o1_400.gif);
+    background-size: 35px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 
 #pacman{
     background: url(/advancedJS/Pacman/pacmanImg/pacmanPac.gif);
