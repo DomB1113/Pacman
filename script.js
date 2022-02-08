@@ -36,6 +36,18 @@ var pacman = {
     x:2,
     y:2
 };
+var ghost1 = { //bomb walking
+    x:15,
+    y:18
+}
+var ghost2 = { //ghost float
+    x:16,
+    y:20
+}
+var ghost3 = { //angry bomb
+    x:14,
+    y:20
+}
 
 function displayWorld(){
     var output= '';
@@ -61,31 +73,34 @@ function displayPacman(){
     document.getElementById('pacman').style.top = pacman.y*30 + "px"
     document.getElementById('pacman').style.left = pacman.x*30 + "px"
 }
+
+function displayGhost1(){
+    document.getElementById('ghost1').style.top = ghost1.y*30 + "px"
+    document.getElementById('ghost1').style.left = ghost1.x*30 + "px"
+}
+function displayGhost2(){
+    document.getElementById('ghost2').style.top = ghost2.y*30 + "px"
+    document.getElementById('ghost2').style.left = ghost2.x*30 + "px"
+}
+function displayGhost3(){
+    document.getElementById('ghost3').style.top = ghost3.y*30 + "px"
+    document.getElementById('ghost3').style.left = ghost3.x*30 + "px"
+}
+
+
 function displayScore(){
     document.getElementById('score').innerHTML = score;
 }
-
+displayGhost3();
+displayGhost2();
+displayGhost1();
 displayWorld();
 displayPacman();
 displayScore();
 
-// document.onkeydown = function(r){  //rotationing pacman on input
-//     if(r.keyCode == 37){ //left
-//         // pacman.style.transform = "rotate(180deg)"
-//     }
-//     else if(r.keyCode == 39){//right
-        
-//     }
-//     else if(r.keyCode == 38){// top
-//         pacman.y --;
-//     }
-//     else if(r.keyCode == 40){// bottom
-//         pacman.y ++;
-//     }
-// }
 
 
-document.onkeydown = function(e){
+document.onkeydown = function(e){ //pacman movement
     if(e.keyCode == 37 && world[pacman.y][pacman.x-1] !=2){ //left
         pacman.x--;
         
@@ -122,41 +137,23 @@ document.onkeydown = function(e){
 var ofset = 0;
 document.addEventListener(`keydown`, function(R){ //rotate
     if(R.keyCode == 37){ //left
-        ofset = 0
+        ofset = 0;
         ofset += 0;
     }
     else if(R.keyCode == 39){//right
-        ofset = 0
+        ofset = 0;
         ofset += 180;
     }
     else if(R.keyCode == 38){// top
-        ofset = 0
+        ofset = 0;
         ofset+= 90;
     }
     else if(R.keyCode == 40){// bottom
-        ofset = 0
+        ofset = 0;
         ofset += 270;
     }
     document.getElementById("pacman").style.transform = `rotate(${ofset}deg)`
-    
 })
-// document.addEventListener(`keydown`, function(r){ //reset
-//     if(r.keyCode == 37){ //left
-    
-//     }
-//     else if(r.keyCode == 39){//right
-        
-//     }
-//     else if(r.keyCode == 38){// top
-        
-
-//     }
-//     else if(r.keyCode == 40){// bottom
-        
-//     }
-//     document.getElementById("pacman").style.transform = `rotate(${ofset}deg)`
-// })
-
 
 
 

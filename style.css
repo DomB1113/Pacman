@@ -2,7 +2,6 @@
 body{
     background-color: black;
     margin: 0px;
-
 }
 
 .row div{
@@ -16,20 +15,47 @@ body{
     background-color: blue;
 }
 .coin{
-    background: url(/advancedJS/Pacman/pacmanImg/pacmanCoin.gif);
+    background: url(/Pacman/pacmanImg/pacmanCoin.gif);
     background-size: 26px;
     background-repeat: no-repeat;
     background-position: center;
 }
 .cherry{
-    background: url(/advancedJS/Pacman/pacmanImg/Tumblr_p0ugakbvzB1ush256o1_400.gif);
+    background: url(/Pacman/pacmanImg/Tumblr_p0ugakbvzB1ush256o1_400.gif);
     background-size: 35px;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 #pacman{
-    background: url(/advancedJS/Pacman/pacmanImg/pacmanPac.gif);
+    background: url(/Pacman/pacmanImg/pacmanPac.gif);
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+}
+#ghost1{
+    background: url(/Pacman/pacmanImg/dcp08i5-7901a914-a7b5-476c-a2f4-a297202b913a.gif);
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+}
+#ghost2{
+    background: url(/Pacman/pacmanImg/ghost.gif);
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+}
+#ghost3{
+    background: url(/Pacman/pacmanImg/tumblr_n52yq1zwL61sqsanfo1_400.gif);
     background-size: 30px;
     background-repeat: no-repeat;
     background-position: center;
